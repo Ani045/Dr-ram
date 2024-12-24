@@ -114,7 +114,7 @@ Version: 1.0.0
   --icon-font: "Font Awesome 6 Pro";
   --main-container: 1224px;
   --container-gutters: 24px;
-  --section-space: 70px;
+  --section-space: 60px;
   --section-space-mobile: 80px;
   --section-title-space: 60px;
   --ripple-ani-duration: 5s;
@@ -12731,7 +12731,7 @@ span.select2-selection.select2-selection--single:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: var(--theme-color2);
-  padding: 60px;
+  padding: 40px;
   border-radius: 30px;
   /* Large devices */
   /* Medium devices */
@@ -14710,8 +14710,8 @@ span.select2-selection.select2-selection--single:focus {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1490px;
-  padding: 100px 12px;
+  max-width: 1400px;
+  padding: 60px 12px;
   margin: 0 auto;
   /* Large devices */
   /* Medium devices */
@@ -16139,7 +16139,7 @@ span.select2-selection.select2-selection--single:focus {
 @media (max-width: 991px) {
   .space,
   .space-top {
-    padding-top: var(--section-space-mobile);
+    padding-top: calc(var(--section-space-mobile) - 30px);
   }
   .space,
   .space-bottom {
