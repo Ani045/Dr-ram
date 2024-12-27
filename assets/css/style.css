@@ -379,6 +379,16 @@ h6 {
     font-size: 16px;
   }
 }
+@media (max-width: 767px) {
+  .home-cta {
+   margin-top: 0px;
+  }
+}
+@media (max-width: 1199px) {
+  .home-cta {
+   margin-top: 110px;
+  }
+}
 
 /* Extra small devices */
 @media (max-width: 575px) {
@@ -473,6 +483,7 @@ h6 {
     --main-container: 1800px;
   }
 }
+
 
 @media only screen and (max-width: 1600px) {
   .container-fluid.px-0 {
@@ -1817,7 +1828,7 @@ textarea.is-invalid {
 .scroll-top {
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 90px;
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -4567,6 +4578,7 @@ ol.wp-block-rss {
   font-size: 14px;
 }
 
+
 @media (min-width: 1200px) {
   .sidebar-shop .widget {
     padding: 30px;
@@ -4592,6 +4604,7 @@ ol.wp-block-rss {
   .author-widget-wrap .name {
     font-size: 22px;
   }
+  
 }
 
 /* Medium devices */
@@ -15320,7 +15333,7 @@ span.select2-selection.select2-selection--single:focus {
 .cta-sec4 {
   position: relative;
   z-index: 3;
-  margin-top: -110px;
+  margin-top: -150px;
   background-size: 100% calc(100% - 110px);
   background-position: bottom left;
   background-repeat: no-repeat;
@@ -15329,7 +15342,7 @@ span.select2-selection.select2-selection--single:focus {
 
 @media (max-width: 1199px) {
   .cta-sec4 {
-    background-size: cover;
+    /* background-size: cover; */
   }
 }
 

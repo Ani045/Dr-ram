@@ -39,6 +39,121 @@
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .sticky-container {
+                padding: 0px;
+                margin: 0px;
+                position: fixed;
+                right: -125px;
+                top: 40%;
+                width: 200px;
+                z-index: 99;
+            }
+            .floating-sidebar-sec li {
+                width: 350px;
+                list-style-type: none;
+                color: #ffffff;
+                height: 43px;
+                padding: 0px;
+                margin: 0px 0px 1px 0px;
+                border-bottom-left-radius: 30px;
+                border-top-left-radius: 30px;
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
+                cursor: pointer;
+                background:linear-gradient(180deg, var(--theme-color2) 37.5%, #E3EBFF 100%);
+                
+            }
+            .floating-sidebar-sec li p {
+                padding-top: 5px;
+                color: #fff;
+                padding-top: 10px;
+                margin: 0px;
+                line-height: 16px;
+                font-size: 11px;
+            }
+            .floating-sidebar-sec li p span {
+                top: 2px;
+                position: relative;
+                padding: 10px 15px;
+                font-size: 20px;
+            }
+            .floating-sidebar-sec li p a {
+                font-size: 16px;
+                line-height: 0;
+                text-decoration: none;
+                color: #fff;
+                text-decoration: none;
+            }
+            .floating-sidebar-sec li:hover {
+                margin-left: -180px;
+            }
+            @media screen and (max-width: 768px) {
+                .sticky-container ul {
+                    top: 150px !important;
+                }
+            }
+
+            .floating-navbar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            max-width: 400px;
+            /* background: rgba(255, 255, 255, 0.8); */
+            /* backdrop-filter: blur(10px); */
+            background-color: var(--theme-color2);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            z-index: 1000;
+            animation: slideUp 0.5s ease;
+        }
+
+        .nav-item1 {
+            text-align: center;
+            flex: 1;
+        }
+
+        .nav-link1 {
+            color: #fff;
+            font-size: 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link1:hover {
+            transform: translateY(-5px);
+            color: #ffe145;
+        }
+
+        .nav-link1:active {
+            transform: translateY(-2px) scale(0.95);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translate(-50%, 100%);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .floating-navbar {
+                display: none !important;
+            }
+        }
+
+
+    </style>
 
 </head>
 
@@ -199,8 +314,8 @@
                         <div class="col-auto d-none d-lg-inline-block">
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
-                                    <li><a href="">Home</a></li>
-                                    <li><a href="">About</a></li>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
                                     <li>
                                         <a href="#">Treatments</a>
                                         <ul class="sub-menu">
@@ -232,6 +347,34 @@
             </div>
         </div>
     </header>
+<!-- Floating menu -->
+    <div class="floating-navbar d-flex">
+        <div class="nav-item1">
+            <a href="#" class="nav-link1">
+                <i class="bi bi-house-door"></i>
+            </a>
+        </div>
+        <div class="nav-item1">
+            <a href="#" class="nav-link1">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+        </div>
+        <div class="nav-item1">
+            <a href="#" class="nav-link1">
+                <i class="bi bi-telephone"></i>
+            </a>
+        </div>
+        <div class="nav-item1">
+            <a href="#" class="nav-link1">
+                <i class="bi bi-calendar4"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+
+
+    <!-- Floating menu end -->
 
 <!--==============================
 Hero Area
@@ -324,6 +467,50 @@ Hero Area
 <!--======== / Hero Section ========-->
 
 
+<!-- Social Area Handle-->
+
+<div class="sticky-container">
+    <ul class="sticky floating-sidebar-sec">
+        <li class="sidebar-0" >
+            <p class="sidebar-icon-block">
+                <span>     
+                    <i class="fab fa-facebook-f" width="32" height="32"></i>
+                </span>
+                <a href="#" target="_blank" data-abc="true">Facebook<span></span></a>
+            </p>
+        </li>
+        <li class="sidebar-0">
+            <p class="sidebar-icon-block">
+                <span>     
+                    <i class="fab fa-youtube" width="32" height="32"></i>
+                </span>
+                <a href="#" target="_blank" data-abc="true">Youtube<span></span></a>
+            </p>
+        </li>
+        <li class="sidebar-0">
+            <p class="sidebar-icon-block">
+                <span>     
+                    <i class="fab fa-instagram" width="32" height="32"></i>
+                </span>
+                <a href="#" target="_blank" data-abc="true">Instagram<span></span></a>
+            </p>
+        </li>
+        <li class="sidebar-0">
+            <p class="sidebar-icon-block">
+                <span>     
+                    <i class="fab fa-twitter" width="32" height="32"></i>
+                </span>
+                <a href="#" target="_blank" data-abc="true">Twitter<span></span></a>
+            </p>
+        </li>
+    </ul>
+    </div>
+
+
+
+<!-- Social Area Ends  -->
+
+
     <!--==============================
 Feature Area  
 ==============================-->
@@ -372,13 +559,13 @@ Feature Area
     <!--==============================
 About Area  
 ==============================-->
-<div class="space" id="about-sec">
+<div class="space "  id="about-sec">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 mb-30 mb-xl-0">
                 <div class="img-box6">
                     <div class="img1">
-                        <img src="assets/img/team/Dr. Ramniwas Swarnkar.png" alt="About">
+                        <img src="assets/img/DR.Ram.png" alt="About">
                     </div>
                     <div class="img2" data-mask-src="assets/img/normal/about_mask.png">
                         <img data-mask-src="assets/img/normal/about_mask.png" src="assets/img/backgrounds/about-2.jpg" alt="About" style="width: 150px; height: 150px;">
@@ -424,7 +611,7 @@ About Area
                     </div>
                     <div class="about-counter">
                         <h3 class="box-number">
-                            <span class="counter-number">7</span>+
+                            <span class="counter-number">7 </span>+
                         </h3>
                         <h4 class="box-title">Years Of <br> Experienced</h4>
                     </div>
@@ -441,7 +628,7 @@ About Area
 <!--==============================
 Service Area  
 ==============================-->
-<section class="overflow-hidden bg-smoke space" id="service-sec" style="padding-bottom: 120px;">
+<section class="overflow-hidden bg-smoke space" id="service-sec" style="padding-bottom: 110px;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8">
@@ -565,9 +752,9 @@ Service Area
     <!--==============================
 Cta Area  
 ==============================-->
-    <section class="overflow-hidden cta-sec4"  style="background-image: url(assets/img/backgrounds/cta-background.png);">
+    <section class=" overflow-hidden cta-sec4"  style="background-image: url(assets/img/backgrounds/cta-background.png);">
         <div class="container z-index-common">
-            <div class="row align-items-center justify-content-between text-center text-xl-start"  style="margin-top: 110px;">
+            <div class=" home-cta row align-items-center justify-content-between text-center text-xl-start " Style="margin-top: 110px;" >
                 <div class="col-xl-7 col-lg-9 space-extra">
                     <div class="title-area mb-32">
                         <h2 class="sec-title text-white">Precision in Motion, Excellence in Care</h2>
@@ -583,7 +770,7 @@ Cta Area
                 </div>
                 <div class="col-xl-5">
                     <div class="img-box2">
-                        <img src="assets/img/backgrounds/new-patients.png" alt="image">
+                        <img src="assets/img/Precision in Motion,-Excellence-in-Care.png" alt="image">
                     </div>
                 </div>
             </div>
@@ -721,7 +908,7 @@ Service Area
     <!--==============================
 Feature Area  
 ==============================-->
-    <div class="overflow-hidden space">
+    <div class="overflow-hidden space" Style="padding-bottom: 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 text-center text-xl-start">
@@ -759,6 +946,9 @@ Feature Area
                                     <p class="box-text">Tailored treatment plans that address individual health needs and recovery goals.</p>
                                 </div>
                             </div>
+                            <div class="choose-feature">
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -787,14 +977,14 @@ Counter Area
                     <h2 class="box-number">
                         <span class="number"><span class="counter-number">7</span></span><span class="plus">+</span>
                     </h2>
-                    <p class="box-text">Experience</p>
+                    <p class="box-text">Years of Experience</p>
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card">
                     <h2 class="box-number">
                         <span class="number"><span class="counter-number">2</span>k</span><span class="plus">+</span>
                     </h2>
-                    <p class="box-text">Operations Successful</p>
+                    <p class="box-text">Successful Operations</p>
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card">
@@ -814,7 +1004,7 @@ Counter Area
     <!--==============================
 Testimonial Area  
 ==============================-->
-    <section class="space" id="testi-sec" style="padding-top: 125px;">
+    <section class="space" id="testi-sec" style="padding-top: 110px;">
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title"><img src="assets/img/theme-img/title_icon.svg" alt="shape">Testimonials</span>
@@ -1016,10 +1206,10 @@ Appointment Area
             <div class="form-wrap">
                 <div class="img-box4">
                     <div class="img1">
-                        <img src="assets/img/backgrounds/make-an-appointment-2.png" alt="Image">
+                        <img src="assets/img/Make-An-Appointment-1..png" alt="Image">
                     </div>
                     <div class="img2">
-                        <img src="assets/img/backgrounds/make-an-appointment-1.png" alt="Image">
+                        <img src="assets/img/Make-An-Appointment-2.png" alt="Image">
                     </div>
                 </div>
                 <form  class="appointment-form">
@@ -1067,7 +1257,7 @@ Appointment Area
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-6 col-xl-auto">
+                    <div class="col-md-6 col-12 col-xl-auto">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
@@ -1094,7 +1284,7 @@ Appointment Area
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-auto">
+                    <div class="col-md-6 col-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
                             <h3 class="widget_title">Quick Links</h3>
                             <div class="menu-all-pages-container">
@@ -1107,7 +1297,7 @@ Appointment Area
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-auto">
+                    <div class="col-md-6 col-6 col-xl-auto ">
                         <div class="widget widget_nav_menu footer-widget">
                             <h3 class="widget_title">Our service</h3>
                             <div class="menu-all-pages-container">
@@ -1122,7 +1312,7 @@ Appointment Area
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-auto">
+                    <div class="col-md-6 col-12 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
                             <h3 class="widget_title">Get in Touch</h3>
                             <p class="footer-info">
